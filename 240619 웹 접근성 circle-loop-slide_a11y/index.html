@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>circle loop slide A11y</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/c12878d3ba.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="./script/main.js"></script>
+	</head>
+	<body>
+		<header role="banner">
+			<!-- header를 landmark role로 정의한 것임
+			랜드마크 역할이란? 웹 접근성에서 스크린 리더기와 같은 보조 기술이
+			웹 페이지의 구조를 쉽게 이해하고 탐색하도록 기준점을 잡아주는 역할을 함
+
+			role="banner"는 페이지나 해당 섹션의 주요 헤더를 나타내는 역할로,
+			사용자가 페이지에서 첫번째로 접하게 되는 중요한 정보나 로고, 사이트 이름 등이
+			포함된 영역으로 볼 수 있음
+
+			=> 요약 : role="banner"는 주요한 정보를 담고있는 태그에 부여한다 -->
+			<h1>LOGO</h1>
+			<nav role="navigation">
+				<!-- 사용자가 웹 사이트 내에서 다른 페이지로 이동할 수 있는 역할을
+				부여하여 스크린 리더기가 페이지의 네비게이션 메뉴로 빠르게 접근할 수 있도록 도움 -->
+				<ul id="gnb" role="menubar">
+					<li class="on">
+						<a href="#" role="menuitem" aria-label="Department Section"
+							>Department</a
+						>
+					</li>
+					<li>
+						<a href="#" role="menuitem" aria-label="Community Section"
+							>Community</a
+						>
+					</li>
+					<li>
+						<a href="#" role="menuitem" aria-label="Gallery Section">Gallery</a>
+					</li>
+					<li>
+						<a href="#" role="menuitem" aria-label="Youtube Section">Youtube</a>
+					</li>
+					<li>
+						<a href="#" role="menuitem" aria-label="Location Section"
+							>Location</a
+						>
+					</li>
+					<!-- gnb에 menubar 역할을 부여하여 메뉴바의 위치를 알 수 있도록 함
+					또한 각 메뉴에는 menuitem의 역할을 부여하는데, li에는 부여하면 안됨(웹 표준에 어긋남) -->
+				</ul>
+				<i class="fa-solid fa-bars" aria-label="Menu"></i>
+				<!-- aria-label은 img태그의 alt속성과 같이 해당 메뉴와 링크될 대상(클릭 시 이동되는 페이지)의
+				내용을 간략하게 라벨링 해주는 것.
+				위의 모바일 상황에서 햄버거 버튼에도 라벨링을 하여 해당 아이콘이 어떤 역할을 하는지 알려줌 -->
+			</nav>
+		</header>
+		<figure>
+			<section class="slide" role="region" aria-label="slide Carousel">
+				<!-- Carousel은 이미지나 텍스트의 슬라이드를 가로로 나열하여
+				여러개를 표시하는 컴포넌트임
+				슬라이드 하나만 존재하는 것이 아닌 슬라이드 역할을 하는 대상이 뭉쳐서
+				하나의 공간에 존재한다는 의미로 캐러셀이라는 라벨링을 함
+				
+				role="region"은 특정 영역이 중요한 컨텐츠를 담고 있다는 의미를 내포함
+				이 역할은 중요하거나 사용자가 자주 접근해야 하는 컨텐츠라는 의미가 됨 -->
+				<ul>
+					<li class="on">
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Lyrical Image Slide"
+						>
+							<!-- role="group"은 여러 요소를 그룹으로 묶어 하나의 논리적 단위로
+							나타내기 위해 사용함
+							이는 스크린 리더기의 이해를 돕기 위해 그룹 내의 요소들을 단위로 처리함
+						
+							즉 슬라이드 내의 여러 요소(이미지, 제목, 링크 등)를 하나의 논리적 그룹으로 묶어서
+							스크린 리더기가 이 요소들을 하나의 단위로 인식하도록 도움
+						
+							aria-roledescription은 그룹이 슬라이드임을 나타냄
+							즉 사용자의 스크린 리더기가 이 그룹이 캐러셀 슬라이드의 일부임을 알도록 하는 것
+						
+							aria-label은 img 태그의 alt 속성과 비슷한 역할을 하는 것 -->
+							<h2>LYRICAL</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic1.jpg)"
+								aria-hidden="true"
+							></div>
+							<!-- aria-hidden="true"는 요소롤 스크린 리더기에서 숨김(읽지 않음)
+							따라서 사용자는 해당 요소와 상호작용을 할 수 없음
+							또한 어떤 요소를 이 대상 안에 숨길 때도 사용함
+							(보통 시각적 장식이나 보조적인 컨텐츠를 숨기면서 상호작용을 배제할 때 사용) -->
+							<a
+								href="#"
+								aria-label="View details about Lyrical image"
+								style="background: linear-gradient(30deg, #bdddd8, #fac7b8)"
+							>
+								<!-- aria-label의 역할 중에는 목적을 명확하게 이해할 수 있도록
+								디테일한 설명을 작성하는 것이 있음
+								모호한 링크 텍스트가 있다면 그것을 보완 설명하기 위한 수단으로써 사용함 -->
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+
+					<li>
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Crystal Image Slide"
+						>
+							<h2>CRYSTAL</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic2.jpg)"
+								aria-hidden="true"
+							></div>
+							<a
+								href="#"
+								aria-label="View details about Crystal image"
+								style="background: linear-gradient(30deg, #b0c4ff, pink)"
+							>
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+
+					<li>
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Pristine Image Slide"
+						>
+							<h2>PRISTINE</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic3.jpg)"
+								aria-hidden="true"
+							></div>
+							<a
+								href="#"
+								aria-label="View details about Pristine image"
+								style="background: linear-gradient(30deg, #f1d4d4, #b2ece6)"
+							>
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Cloudy Image Slide"
+						>
+							<h2>CLOUDY</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic4.jpg)"
+								aria-hidden="true"
+							></div>
+							<a
+								href="#"
+								aria-label="View details about Cloudy image"
+								style="background: linear-gradient(30deg, #cce0eb, #ebd9e9)"
+							>
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Zenith Image Slide"
+						>
+							<h2>ZENITH</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic5.jpg)"
+								aria-hidden="true"
+							></div>
+							<a
+								href="#"
+								aria-label="View details about Zenith image"
+								style="background: linear-gradient(30deg, #f5d1f5, #ffeca9)"
+							>
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Aurora Image Slide"
+						>
+							<h2>AURORA</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic6.jpg)"
+								aria-hidden="true"
+							></div>
+							<a
+								href="#"
+								aria-label="View details about Aurora image"
+								style="background: linear-gradient(30deg, #b0c4ff, pink)"
+							>
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div
+							role="group"
+							aria-roledescription="slide"
+							aria-label="Desert Image Slide"
+						>
+							<h2>DESERT</h2>
+							<div
+								class="inner"
+								style="background-image: url(images/pic7.jpg)"
+								aria-hidden="true"
+							></div>
+							<a
+								href="#"
+								aria-label="View details about Desert image"
+								style="background: linear-gradient(30deg, #edd7cb, #b7cddf)"
+							>
+								<span>VIEW DETAIL</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<nav class="btns">
+				<!-- <button class="prev" type="button" aria-label="previous slide">
+					PREV
+				</button>
+				<button class="next" type="button" aria-label="next slide">NEXT</button> -->
+
+				<div class="prev" aria-label="previous slide">PREV</div>
+				<div class="next" aria-label="next slide">NEXT</div>
+			</nav>
+
+			<!-- <aside></aside> -->
+			<!-- aside 태그를 사용한 이유는 웹 표준과 웹 접근성의 시멘틱 태그 때문임.
+			하지만 aside태그에 role이나 aria속성을 적용하는 것은 웹 표준에 어긋남
+			따라서 웹 접근성을 위해서는 시멘틱 태그 사용을 버리더라도 role과 aria속성을 선택 -->
+
+			<div
+				class="pop"
+				role="dialog"
+				aria-labelledby="dialog title"
+				aria-describedby="dialogDesc"
+			>
+				<!-- role="dialog"는 해당 요소가 모달 팝업(레이어 팝업)임을 나타냄
+				스크린 리더기는 이 요소의 다이얼로그를 인식하여 팝업이 열릴 때 자동적으로
+				포커스를 이동시켜 사용자가 즉시 상호작용 할 수 있도록 함
+			
+				웹 접근성 고려 시 모든 팝업에 부여해야하지만, 모달 팝업 시 필수, 레이어는 선택으로 봐도 됨
+		
+				aria-labelledby="dialog title"를 div에 작성하고,
+				실제 title에 해당하는 h2태그에 id로 같은 값을 부여해줌
+				이렇게하면 팝업의 제목을 제공하는 요소를 연결하여 알려줄 수 있음 
+		
+				aria-describedby="dialogDesc"도 마찬가지로 p에 id로 같은 값을 부여-->
+				<h2 id="dialogTitle">TITLE</h2>
+				<p id="dialogDesc">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, deserunt
+					expedita perspiciatis molestias voluptatem incidunt, vero corrupti,
+					laborum quos nisi ab dolor sunt. Expedita possimus veniam aliquid
+					nesciunt pariatur consequuntur.
+				</p>
+				<button class="close" type="button" aria-label="close dialog">
+					close
+				</button>
+			</div>
+		</figure>
+		<!-- 웹 접근성과 웹 표준은 서로 충돌하는 부분이 있기 때문에 모두를 100% 충족하는 것은 불가능에 가까움 -->
+	</body>
+</html>

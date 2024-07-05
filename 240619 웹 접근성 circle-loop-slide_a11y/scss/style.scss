@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+$size: 400px;
+$gap: 20px;
+$deg: 50deg;
+
+header {
+	width: 88vw;
+	height: 120px;
+	position: absolute;
+	top: 0;
+	left: 6vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+	h1 {
+		font: bold 24px/1 'arial';
+		color: #777;
+	}
+	nav {
+		#gnb {
+			display: flex;
+			gap: 70px;
+			li {
+				a {
+					font: 14px/1 'arial';
+					color: #888;
+					letter-spacing: 1px;
+				}
+			}
+		}
+		.fa-bars {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			font-size: 24px;
+			color: #999;
+			transform: translateY(-50%);
+			display: none;
+		}
+	}
+}
+
+figure {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-color: #efefef;
+	.slide {
+		width: $size;
+		height: $size;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-top: calc(-1 * $size / 2.5);
+		margin-left: calc(-1 * $size / 2);
+		transition: all 0.5s;
+		ul {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			// 공통으로 li를 코딩함
+			li {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 99999px;
+				transition: 1s;
+				div {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+					h2 {
+						font: normal 24px/1 'anton';
+						color: #ccc;
+						position: absolute;
+						top: 120%;
+						left: 50%;
+						transform: translateX(-50%);
+						transition: all 1.5s;
+						letter-spacing: 2px;
+					}
+					.inner {
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-image: inherit;
+						background-repeat: inherit;
+						background-size: inherit;
+						background-position: inherit;
+						// 인라인으로 지정한 css와 부모인 li에 부여된 값을
+						// 그대로 유지하기 위해 상속이라는 코드를 작성한 것
+						&::before,
+						&::after {
+							content: '';
+							position: absolute;
+							top: 0px;
+							left: 0px;
+							width: 100%;
+							height: 100%;
+							background-image: inherit;
+							background-repeat: inherit;
+							background-size: inherit;
+							border-radius: 50%;
+							transition: all 1.5s;
+						}
+						&::before {
+							top: 10%;
+							left: 2%;
+							filter: blur(20px);
+							opacity: 0.7;
+						}
+					}
+					a {
+						position: absolute;
+						bottom: 0%;
+						width: 40px;
+						height: 40px;
+						border-radius: 20px;
+						left: 50%;
+						transform: translateX(-50%);
+						opacity: 0;
+						pointer-events: auto;
+						transition: opacity 1s, bottom 1s, width 0.5s 1s;
+						&::before {
+							content: '';
+							width: 100%;
+							height: 100%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							position: absolute;
+							top: 0;
+							left: 0;
+							transform: translateY(30%);
+							background: inherit;
+							border-radius: 20px;
+							filter: blur(10px);
+							opacity: 0.8;
+							z-index: -1;
+						}
+						span {
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+							text-indent: -40px;
+							font: 11px/40px 'arial';
+							color: #fff;
+							display: inline-block;
+							text-align: center;
+							transition: opacity 0.5s 1s;
+						}
+						&.off {
+							opacity: 0;
+							pointer-events: none;
+						}
+					}
+				}
+			}
+
+			// 세부 li를 코딩함
+			li {
+				&:nth-of-type(1) {
+					transform: translateX(-($size * 3 + $gap)) scale(0.6);
+					.inner::before,
+					.inner::after {
+						transform: rotate(-$deg * 3);
+					}
+				}
+				&:nth-of-type(2) {
+					transform: translateX(-($size * 2 + $gap)) scale(0.6);
+					.inner::before,
+					.inner::after {
+						transform: rotate(-$deg * 2);
+					}
+				}
+				&:nth-of-type(3) {
+					transform: translateX(-($size * 1 + $gap)) scale(0.6);
+					.inner::before,
+					.inner::after {
+						transform: rotate(-$deg * 1);
+					}
+				}
+				&:nth-of-type(4) {
+					// 4번째는 활성화 된 슬라이드
+					opacity: 1;
+					transform: translateX(0px) scale(1);
+					.inner::before,
+					.inner::after {
+						transform: rotate($deg * 0);
+					}
+					h2 {
+						font-size: 14vw;
+						opacity: 0.4;
+						color: #fff;
+						top: -20vh;
+						letter-spacing: 0px;
+					}
+					a {
+						opacity: 1;
+						pointer-events: auto;
+						bottom: -18%;
+						width: 200px;
+						span {
+							text-indent: 0px;
+							opacity: 1;
+						}
+					}
+				}
+				&:nth-of-type(5) {
+					transform: translateX(($size * 1 + $gap)) scale(0.6);
+					.inner::before,
+					.inner::after {
+						transform: rotate($deg * 1);
+					}
+				}
+				&:nth-of-type(6) {
+					transform: translateX(($size * 2 + $gap)) scale(0.6);
+					.inner::before,
+					.inner::after {
+						transform: rotate($deg * 2);
+					}
+				}
+				&:nth-of-type(7) {
+					transform: translateX(($size * 3 + $gap)) scale(0.6);
+					.inner::before,
+					.inner::after {
+						transform: rotate($deg * 3);
+					}
+				}
+			}
+		}
+	}
+	.btns {
+		display: flex;
+		position: absolute;
+		bottom: 13vh;
+		right: 10vw;
+		gap: 50px;
+		pointer-events: auto;
+		transition: all 0.5s;
+		> * {
+			width: 120px;
+			height: 36px;
+			background-color: #999;
+			border-radius: 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font: 12px/1 'arial';
+			color: #fff;
+			cursor: pointer;
+		}
+		&.off {
+			right: -10vw;
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	.pop {
+		width: 50vw;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -50vw;
+		background-color: rgba(0, 0, 0, 0.05);
+		backdrop-filter: blur(10px);
+		// 뒷배경에만 필터를 넣는 기능
+		padding: 22vh 5vw 10vh 6vw;
+		transition: 0.5s;
+		z-index: 10;
+		h2 {
+			font: 12vw/1 'anton';
+			color: #fff;
+			margin-bottom: 40px;
+			opacity: 0;
+			transform: translateX(-100px);
+			transition: 1s 0.3s;
+		}
+		p {
+			font: 22px/1.2 'arial';
+			color: #eee;
+			letter-spacing: 1px;
+			margin-bottom: 50px;
+			opacity: 0;
+			transform: translateX(-100px);
+			transition: 0.5s 1s;
+		}
+		.close {
+			width: 200px;
+			height: 40px;
+			background-color: rgba(255, 255, 255, 0.5);
+			font: bold 14px/1 'arial';
+			color: #fff;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #fff;
+			opacity: 0;
+			transform: translateY(200px);
+			transition: 0.5s 1.5s;
+		}
+		&.on {
+			left: 0;
+			h2,
+			p,
+			.close {
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+	}
+}

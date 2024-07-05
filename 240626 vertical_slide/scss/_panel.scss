@@ -1,0 +1,174 @@
+.panel {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	li {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+		.bg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			// 인터랙션을 줄 요소들을 화면에서 띄워서 효과를 주기 편하게 하는 목적
+			background-position: 9999999px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			transition: 0.8s;
+			opacity: 0;
+			.shadow {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				background-image: inherit;
+				background-size: inherit;
+				background-repeat: inherit;
+				background-position: center;
+				margin-top: 40px;
+				transform: scale(0.95);
+				filter: blur(20px);
+				opacity: 0.7;
+				z-index: 1;
+			}
+			&::before,
+			&:after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-image: inherit;
+				background-repeat: inherit;
+				background-size: inherit;
+				background-position: center;
+				z-index: 2;
+				transition: margin-top 0.6s;
+			}
+			&::before {
+				clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+				margin-top: -100px;
+			}
+			&:after {
+				clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+				margin-top: 100px;
+			}
+		}
+		.txt {
+			position: absolute;
+			top: 50%;
+			left: 6vw;
+			transform: translateY(-50%);
+			opacity: 0;
+			h2 {
+				font: normal 7vw/1 'anton';
+				color: rgba(255, 255, 255, 0.9);
+				display: flex;
+				gap: 3px;
+				position: relative;
+				padding-bottom: 10px;
+				&::after {
+					content: '';
+					width: 0%;
+					height: 2px;
+					display: block;
+					background-color: #fff;
+					position: absolute;
+					bottom: 0px;
+					left: 0;
+					transition: 1s 0.5s;
+				}
+				span {
+					display: inline-block;
+					text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+					transition-duration: 0.5s;
+					// transition으로 작성하면 js에서 접근하기 어렵기 때문에 duration으로 작성
+					transform: translateY(120%);
+				}
+			}
+		}
+		nav {
+			display: flex;
+			gap: 10px;
+			align-items: center;
+			position: absolute;
+			left: 6vw;
+			bottom: 10vh;
+			color: #fff;
+			transition: 0.5s;
+			span {
+				display: flex;
+				width: 26px;
+				height: 26px;
+				background-color: #fff;
+				border-radius: 50%;
+				color: #111;
+				justify-content: center;
+				align-items: center;
+				font-size: 10px;
+				transform: translateX(50px) rotate(200deg);
+				transition: 0.5s 1s;
+				opacity: 0;
+			}
+			strong {
+				font-size: 12px;
+				letter-spacing: 1px;
+				transform: translateX(100px);
+				transition: 0.5s 1s;
+				opacity: 0;
+			}
+		}
+		&.on {
+			z-index: 2;
+			.bg {
+				opacity: 1;
+				background-position: center;
+				transform: translateY(0%) rotateX(0deg) scale(1);
+				&::before,
+				&::after {
+					margin-top: 0px;
+				}
+			}
+			.txt {
+				opacity: 1;
+				h2 {
+					&:after {
+						width: 100%;
+					}
+					span {
+						transform: translateY(0%);
+					}
+				}
+			}
+			nav {
+				span {
+					transform: translateX(0px) rotate(0deg);
+					opacity: 1;
+				}
+				strong {
+					opacity: 1;
+					transform: translateX(0px);
+				}
+			}
+		}
+		&.up {
+			.bg {
+				opacity: 0;
+				transform: translateY(-80%) rotateX(-45deg) scale(0.7);
+			}
+		}
+		&.down {
+			.bg {
+				opacity: 0;
+				transform: translateY(80%) rotateX(45deg) scale(0.7);
+			}
+		}
+	}
+}

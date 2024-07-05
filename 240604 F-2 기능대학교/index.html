@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<title>기능대학교</title>
+		<link rel="stylesheet" href="./css/style.css" >
+		<script src="./script/jquery-3.6.4.js"></script>
+		<script defer src="./script/main.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="popupWrap">
+				<aside class="popup">
+					<h2>쇼핑몰 배송비 정책 변경 안내</h2>
+					<p>항상 JUST쇼핑몰을 이용해 주시는 고객님께 진심으로 감사드립니다.
+						저희 JUST쇼핑몰 무료배송 기준이 택배사 운임비 인상으로 인하여
+						부득이하게 배송비 정책이 변경된 점 양해 부탁드립니다.
+						
+						쇼핑몰 일반 배송비는 2,500원이며, 5만원이상 구매시 무료배송입니다.
+						5만원이하 주문건에는 부득이하게 배송비가 발생함을 알려 드립니다.
+						(2023년 3월 7일 기준)
+						
+						더 나은 배송 서비스와 안정된 물류 시스템으로
+						고객님께 만족을 드릴 수 있도록 항상 노력하겠습니다.
+						
+						감사합니다.</p>
+					<button id="close" type="button">닫기</button>
+				</aside>
+			</div>
+			<header>
+				<div class="inner">
+					<h1>
+						<a href="#">
+							<img src="./images/로고.png" alt="주식회사 기능건설 로고">
+						</a>
+					</h1>
+					<!-- ul#gnb>li*4>a[href="#"]+ul.sub>li*4>a[href="#"] -->
+					<ul id="gnb">
+						<li>
+							<a href="#">회사소개</a>
+							<ul class="sub">
+								<li><a href="#">기업정보</a></li>
+								<li><a href="#">CEO인사말</a></li>
+								<li><a href="#">연혁</a></li>
+								<li><a href="#">조직도</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">지속가능경영</a>
+							<ul class="sub">
+								<li><a href="#">윤리경영</a></li>
+								<li><a href="#">품질경영</a></li>
+								<li><a href="#">안전경영</a></li>
+								<li><a href="#">환경경영</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">사업분야</a>
+							<ul class="sub">
+								<li><a href="#">건축사업</a></li>
+								<li><a href="#">토목사업</a></li>
+								<li><a href="#">주택사업</a></li>
+								<li><a href="#">환경/플랜트</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">홍보센터</a>
+							<ul class="sub">
+								<li><a href="#">뉴스</a></li>
+								<li><a href="#">분양뉴스</a></li>
+								<li><a href="#">CI/BI</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<section id="slide">
+				<!-- ul.frame>li*3>img -->
+				<ul class="frame">
+					<li><img src="./images/visual1.jpg" alt="JUST 쇼핑몰 새단장 이벤트"></li>
+					<li><img src="./images/visual2.jpg" alt="봄시즌 마지막 쇼핑위크 최대 70% 할인"></li>
+					<li><img src="./images/visual3.jpg" alt="총알보다 빠른 당일 배송"></li>
+				</ul>
+			</section>
+			<section id="contentBox">
+				<div class="inner">
+					<article class="iconWrap">
+						<a href="#">
+							<img src="./images/바로가기_코스여행.png" alt="코스여행">
+							<span>link1</span>
+						</a>
+						<a href="#">
+							<img src="./images/바로가기_코스여행.png" alt="코스여행">
+							<span>link2</span>
+						</a>
+						<a href="#">
+							<img src="./images/바로가기_코스여행.png" alt="코스여행">
+							<span>link3</span>
+						</a>
+						<a href="#">
+							<img src="./images/바로가기_코스여행.png" alt="코스여행">
+							<span>link4</span>
+						</a>
+						<a href="#">
+							<img src="./images/바로가기_코스여행.png" alt="코스여행">
+							<span>link5</span>
+						</a>
+					</article>
+					<article class="banner">
+						<img src="./images/바로가기_테마여행.png" alt="배너이미지">
+						<div class="txt">
+							<h3>Lorem ipsum dolor sit amet.</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eos corrupti quibusdam adipisci cumque explicabo nam consequuntur beatae maxime ea nobis ad necessitatibus praesentium, saepe et natus numquam sequi dolor!</p>
+						</div>
+						<img src="./images/배너화살표.png" alt="배너화살표">
+					</article>
+					<article class="board">
+						<div id="notice">
+							<div class="name">공지사항</div>
+							<div class="content">
+								<ul>
+									<li><a href="#">3월 재입고 품목을 알려드립니다.</a><span>2023.03.14</span></li>
+									<li><a href="#">반품/환불 규정에 대해 알려드립니다.</a><span>2023.03.06</span></li>
+									<li><a href="#">S/S 시즌 신규 의류 신상품 안내</a><span>2023.02.22</span></li>
+									<li><a href="#">신규회원 대상 할인 이벤트 안내</a><span>2023.01.17</span></li>
+								</ul>
+							</div>
+						</div>
+						<div id="gallery">
+							<div class="name">갤러리</div>
+							<div class="content">
+								<a href="#">
+									<img src="./images/gal1.jpg" alt="1">
+									<span>Lorem, ipsum dolor.</span>
+								</a>
+								<a href="#">
+									<img src="./images/gal1.jpg" alt="1">
+									<span>Lorem, ipsum dolor.</span>
+								</a>
+								<a href="#">
+									<img src="./images/gal1.jpg" alt="1">
+									<span>Lorem, ipsum dolor.</span>
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+			<footer>
+				<div class="inner">
+					<div class="copyright">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, placeat incidunt. Totam placeat id, voluptas nesciunt ducimus beatae eos eligendi! Amet, nisi? Illum harum expedita culpa, officia repudiandae sequi sapiente?
+					</div>
+					<div class="footerWrap">
+						<div class="sns">
+							<a href="#">
+								<img src="./images/sns1.png" alt="1">
+							</a>
+							<a href="#">
+								<img src="./images/sns2.png" alt="2">
+							</a>
+							<a href="#">
+								<img src="./images/sns3.png" alt="3">
+							</a>
+						</div>
+						<div class="familySite">
+							<select name="familySite" id="familySite">
+								<option value="해당 사이트 이름 정도">패밀리사이트1</option>
+								<option value="">패밀리사이트2</option>
+								<option value="">패밀리사이트3</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

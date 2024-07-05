@@ -1,0 +1,192 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  position: relative;
+  overflow: hidden;
+}
+main .list li {
+  width: 15vw;
+  height: 40vh;
+  position: fixed;
+  top: 40%;
+  transition: 1s;
+  transition-timing-function: cubic-bezier(0.93, -0.12, 0.15, 1.02);
+  z-index: 3;
+  padding: 20px;
+  opacity: 1;
+  transform: scale(1);
+}
+main .list li .inner {
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+main .list li .inner h2 {
+  font: bold 20px/1 "arial";
+  color: #888;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+main .list li .inner h2::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #888;
+  margin-bottom: 10px;
+  transition: 0.5s;
+}
+main .list li:nth-of-type(1) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+  z-index: 1;
+  transform: scale(2);
+  transition: all 1s 1s, transform 2.5s 0s;
+}
+main .list li:nth-of-type(1) .inner {
+  border-radius: 0px;
+}
+main .list li:nth-of-type(2) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1);
+}
+main .list li:nth-of-type(2) .inner {
+  background-color: #222;
+  box-shadow: none;
+  border-radius: 0px;
+  padding: 5vw;
+}
+main .list li:nth-of-type(2) .inner h2 {
+  color: #fff;
+  font-size: 8vw;
+}
+main .list li:nth-of-type(2) .inner h2:before {
+  background-color: #fff;
+  height: 6px;
+  width: 6vw;
+  margin-bottom: 20px;
+}
+main .list li:nth-of-type(3) {
+  left: calc(40% + 0vw);
+  transition-delay: 0s;
+}
+main .list li:nth-of-type(4) {
+  left: calc(40% + 15vw);
+  transition-delay: 0.1s;
+}
+main .list li:nth-of-type(5) {
+  left: calc(40% + 30vw);
+  transition-delay: 0.2s;
+}
+main .list li:nth-of-type(6) {
+  left: calc(40% + 45vw);
+  transition-delay: 0.3s;
+  background-color: #fff;
+}
+main .list li:nth-of-type(7) {
+  left: calc(40% + 60vw);
+  transition-delay: 0.4s;
+}
+main .list li:nth-of-type(8) {
+  left: calc(40% + 75vw);
+  transition-delay: 0.5s;
+}
+main .list li[data-index="5"] {
+  background-color: yellow;
+}
+main .navi {
+  position: absolute;
+  left: 40%;
+  top: calc(40% + 40vh + 20px);
+  z-index: 3;
+  padding-left: 20px;
+}
+main .navi .prev,
+main .navi .next {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 20px;
+  position: relative;
+}
+main .navi .prev::before, main .navi .prev::after,
+main .navi .next::before,
+main .navi .next::after {
+  content: "";
+  display: block;
+  width: 17px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+}
+main .navi .prev::before,
+main .navi .next::before {
+  top: 49%;
+  transform: rotate(45deg);
+}
+main .navi .prev::after,
+main .navi .next::after {
+  bottom: 49%;
+  transform: rotate(-45deg);
+}
+main .navi .prev button,
+main .navi .next button {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 49%;
+}
+main .navi .prev::before, main .navi .prev::after {
+  left: 25px;
+  transform-origin: left center;
+}
+main .navi .prev button {
+  left: 25px;
+}
+main .navi .next::before, main .navi .next::after {
+  right: 25px;
+  transform-origin: right center;
+}
+main .navi .next button {
+  right: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

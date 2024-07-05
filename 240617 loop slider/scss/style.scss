@@ -1,0 +1,200 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+$init: 40%;
+$wid: 15vw;
+$ht: 40vh;
+
+main {
+	width: 100vw;
+	height: 100vh;
+	background-color: #111;
+	position: relative;
+	overflow: hidden;
+	.list {
+		li {
+			width: $wid;
+			height: $ht;
+			position: fixed;
+			top: 40%;
+			transition: 1s;
+			transition-timing-function: cubic-bezier(0.93, -0.12, 0.15, 1.02);
+			z-index: 3;
+			padding: 20px;
+			// li간의 여백을 주기 위해 부여
+			opacity: 1;
+			transform: scale(1);
+			.inner {
+				width: 100%;
+				height: 100%;
+				background-color: #333;
+				padding: 20px;
+				border-radius: 15px;
+				box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+				transition: 1s;
+				position: relative;
+				display: flex;
+				align-items: center;
+				h2 {
+					font: bold 20px/1 'arial';
+					color: #888;
+					transition-duration: 0.5s;
+					transition-delay: 0.5s;
+					&::before {
+						content: '';
+						display: block;
+						width: 20px;
+						height: 3px;
+						background-color: #888;
+						margin-bottom: 10px;
+						transition: 0.5s;
+					}
+				}
+			}
+			&:nth-of-type(1) {
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				opacity: 0;
+				z-index: 1;
+				transform: scale(2);
+				transition: all 1s 1s, transform 2.5s 0s;
+				.inner {
+					border-radius: 0px;
+				}
+			}
+			&:nth-of-type(2) {
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				padding: 0px;
+				opacity: 1;
+				z-index: 2;
+				transform: scale(1);
+				.inner {
+					background-color: #222;
+					box-shadow: none;
+					border-radius: 0px;
+					padding: 5vw;
+					h2 {
+						color: #fff;
+						font-size: 8vw;
+						&:before {
+							background-color: #fff;
+							height: 6px;
+							width: 6vw;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+			&:nth-of-type(3) {
+				left: calc($init + $wid * 0);
+				transition-delay: 0s;
+			}
+			&:nth-of-type(4) {
+				left: calc($init + $wid * 1);
+				transition-delay: 0.1s;
+			}
+			&:nth-of-type(5) {
+				left: calc($init + $wid * 2);
+				transition-delay: 0.2s;
+			}
+			&:nth-of-type(6) {
+				left: calc($init + $wid * 3);
+				transition-delay: 0.3s;
+				background-color: #fff;
+			}
+			&:nth-of-type(7) {
+				left: calc($init + $wid * 4);
+				transition-delay: 0.4s;
+			}
+			&:nth-of-type(8) {
+				left: calc($init + $wid * 5);
+				transition-delay: 0.5s;
+			}
+			&[data-index='5'] {
+				background-color: yellow;
+			}
+		}
+	}
+	.navi {
+		position: absolute;
+		left: $init;
+		top: calc(40% + $ht + 20px);
+		z-index: 3;
+		padding-left: 20px;
+		.prev,
+		.next {
+			display: inline-block;
+			// block 주고 flex 부여하는 대신 inline block을 부여하면
+			// 줄바꿈 일어나지 않고 원하는 효과를 얻을 수 있음
+			width: 70px;
+			height: 70px;
+			border: 1px solid #bbb;
+			border-radius: 50%;
+			cursor: pointer;
+			margin-right: 20px;
+			position: relative;
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: 17px;
+				height: 2px;
+				background-color: #fff;
+				position: absolute;
+			}
+			&::before {
+				top: 49%;
+				transform: rotate(45deg);
+			}
+			&::after {
+				bottom: 49%;
+				transform: rotate(-45deg);
+			}
+			button {
+				display: block;
+				width: 20px;
+				height: 2px;
+				background-color: #fff;
+				position: absolute;
+				top: 49%;
+			}
+		}
+
+		.prev {
+			&::before,
+			&::after {
+				left: 25px;
+				transform-origin: left center;
+			}
+			button {
+				left: 25px;
+			}
+		}
+		.next {
+			&::before,
+			&::after {
+				right: 25px;
+				transform-origin: right center;
+			}
+			button {
+				right: 25px;
+			}
+		}
+	}
+}

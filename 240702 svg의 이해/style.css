@@ -1,0 +1,27 @@
+section {
+	width: 100%;
+	height: 100vh;
+}
+section article {
+	width: 500px;
+	margin: 0 auto;
+	border: 1px solid #000;
+	box-sizing: border-box;
+}
+section article svg {
+	width: 100%;
+}
+section article svg path {
+	fill: transparent;
+	stroke: hotpink;
+	stroke-width: 5px;
+	stroke-dasharray: 1520;
+	/* 1520 */
+	stroke-dashoffset: 1520;
+	transition: stroke-dashoffset 2s 0s, fill 1s 2s;
+}
+
+section article.on svg path {
+	stroke-dashoffset: 0;
+	fill: pink;
+}

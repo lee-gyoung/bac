@@ -1,0 +1,101 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+#wrap {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: url(../img/bg1.jpg) no-repeat center/cover;
+	.typo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -60%) scale(0.7);
+	}
+	#banner {
+		width: 100%;
+		position: absolute;
+		bottom: 10%;
+		left: 0px;
+		background-color: rgba(0, 0, 0, 0.8);
+		.list {
+			li {
+				// 부모의 너비가 정해져있다면 flex로 좌우배치가 좀 더 편함
+				// 그러나 부모의 너비는 가늠할 수 없고 자식의 너비만 지정되어 있다면
+				// float으로 자식요소 좌우 정렬하면 편함 (정답은 아님!)
+				width: 240px;
+				float: left;
+				//
+				a {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+		.prev {
+			position: absolute;
+			left: -120px;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: 0.5s;
+			opacity: 0;
+		}
+		.next {
+			position: absolute;
+			right: -120px;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: 0.5s;
+			opacity: 0;
+		}
+		&:hover {
+			.prev {
+				left: 20px;
+				opacity: 1;
+			}
+			.next {
+				right: 20px;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+aside {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 5vw;
+	.pic {
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	span {
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		color: #fff;
+		font: bold 12px/1 'arial';
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Panorama UI</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script defer src="./script/main.js"></script>
+	</head>
+	<body>
+		<main class="wrap">
+			<video
+				src="./asset/bg.mp4"
+				muted
+				autoplay
+				loop
+				aria-hidden="true"
+			></video>
+			<div id="panorama-tab">
+				<p class="status on">
+					<span>Panorama Mode On</span>
+				</p>
+			</div>
+			<section id="circle" role="region" aria-label="carousel">
+				<article
+					class="face1"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div>
+							<!-- 실제 컨텐츠가 들어가는 부분, 슬라이드 안에 구역을 나누고 싶다면 div개수 늘리기 -->
+						</div>
+					</div>
+				</article>
+				<article
+					class="face2"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+				<article
+					class="face3"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+				<article
+					class="face4"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+				<article
+					class="face5"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+				<article
+					class="face6"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+				<article
+					class="face7"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+				<article
+					class="face8"
+					role="group"
+					aria-roledescription="slide"
+					aria-label="content slide"
+				>
+					<h2>CONTENT</h2>
+					<div class="inner">
+						<div></div>
+					</div>
+				</article>
+			</section>
+			<ul class="mode" role="tablist" aria-label="Mode Select">
+				<li class="on">
+					<a
+						href="#"
+						role="tab"
+						aria-selected="true"
+						aria-controls="panorama-tab"
+						>Panorama Mode</a
+					>
+				</li>
+				<li>
+					<a
+						href="#"
+						role="tab"
+						aria-selected="false"
+						aria-controls="control-tab"
+						>Control Mode</a
+					>
+				</li>
+			</ul>
+			<div id="control-tab">
+				<ul class="navi" role="navigation" aria-label="content navigation">
+					<li class="on">
+						<a href="#" role="link" aria-label="content">CONTENT</a>
+					</li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+					<li><a href="#" role="link" aria-label="content">CONTENT</a></li>
+				</ul>
+			</div>
+			<div class="prev" aria-label="previous slide" role="button">
+				<div class="inner">
+					<p class="top"></p>
+					<p class="bottom"></p>
+					<span>PREV</span>
+				</div>
+			</div>
+			<div class="next" aria-label="next slide" role="button">
+				<div class="inner">
+					<p class="top"></p>
+					<p class="bottom"></p>
+					<span>NEXT</span>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

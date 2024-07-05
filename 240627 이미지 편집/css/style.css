@@ -1,0 +1,178 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #e3f2fd;
+}
+
+.editor {
+  width: 850px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 35px 35px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.editor.disable .editorPanel {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.editor.disable .reset {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.editor.disable .saveImg {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.editor h1 {
+  font: bold 22px/1 "arial";
+}
+.editor .inner {
+  display: flex;
+  min-height: 335px;
+  margin: 20px 0px;
+  gap: 20px;
+}
+.editor .inner .editorPanel {
+  width: 280px;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.editor .inner .editorPanel button {
+  height: 40px;
+  font-size: 14px;
+  color: #6c757d;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.editor .inner .editorPanel .filter .title {
+  display: block;
+  font: bold 16px/1 "arial";
+  margin-bottom: 12px;
+}
+.editor .inner .editorPanel .filter .options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.editor .inner .editorPanel .filter .options button {
+  width: calc(50% - 4px);
+}
+.editor .inner .editorPanel .filter .options button.on {
+  background-color: #5372f0;
+  border-color: #5372f0;
+  color: #fff;
+}
+.editor .inner .editorPanel .filter .options button:hover {
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
+}
+.editor .inner .editorPanel .filter .info {
+  margin-top: 12px;
+}
+.editor .inner .editorPanel .filter .info .filterInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.editor .inner .editorPanel .filter .info .filterInfo p {
+  font: 300 15px/1 "arial";
+  color: #333;
+}
+.editor .inner .editorPanel .filter .info input {
+  width: 100%;
+  height: 5px;
+  accent-color: #5372f0;
+}
+.editor .inner .editorPanel .rotate {
+  margin-top: 17px;
+}
+.editor .inner .editorPanel .rotate .title {
+  display: block;
+  font: bold 16px/1 "arial";
+  color: #333;
+  margin-bottom: 12px;
+}
+.editor .inner .editorPanel .rotate .options {
+  display: flex;
+  justify-content: space-between;
+}
+.editor .inner .editorPanel .rotate .options button {
+  width: calc(25% - 3px);
+}
+.editor .inner .previewImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.editor .inner .previewImg img {
+  max-width: 490px;
+  max-height: 335px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.editor .controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.editor .controls button {
+  padding: 11px 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+.editor .controls .reset {
+  border: 1px solid #6c757d;
+  background-color: #fff;
+  color: #6c757d;
+}
+.editor .controls .rowBtn .chooseImg {
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+}
+.editor .controls .rowBtn .saveImg {
+  background-color: #5372f0;
+  border: 1px solid #5372f0;
+}
+
+@media screen and (max-width: 1179px) {
+  .editor {
+    padding: 25px;
+  }
+  .editor .inner {
+    flex-wrap: wrap-reverse;
+  }
+  .editor .inner .editorPanel {
+    width: 100%;
+  }
+  .editor .inner .previewImg {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
