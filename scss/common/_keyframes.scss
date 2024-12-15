@@ -1,0 +1,63 @@
+@keyframes logo {
+	0% {
+		opacity: 0;
+	}
+	90% {
+		opacity: 1;
+	}
+}
+// 헤더 사용
+
+@keyframes texture {
+	0% {
+		transform: translateY(200px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+// 메인 페이지 초기화면, 브랜드 페이지 초기화면 사용
+
+@keyframes btn {
+	0% {
+		opacity: 0.1;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+// 메인페이지 초기화면 스크롤 버튼
+
+@keyframes contact {
+	0% {
+		transform: translateX(-500px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes contact2 {
+	0% {
+		transform: translateX(500px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+// 메인페이지 contact 영역 이미지
+
+@keyframes bgc {
+	0% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+// 브랜드 페이지 초기화면

@@ -1,0 +1,451 @@
+#brand {
+	.inner {
+		width: 100%;
+		padding-top: 105px;
+		div[class*='story'] {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			img {
+				width: 50%;
+				height: 100%;
+			}
+			.text {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				h4 {
+					padding-bottom: 50px;
+					font-size: 37px;
+					font-family: 'Lora';
+				}
+				p {
+					width: 60%;
+					padding-bottom: 50px;
+					font-size: 17px;
+					line-height: 1.8;
+					font-family: 'Pretendard';
+					text-align: center;
+				}
+				p.eng {
+					font: 17px/1.7 'Lato';
+					padding-bottom: 0px;
+				}
+			}
+		}
+		.brand_story1 {
+			background-color: #2a3923;
+			animation: bgc 1s;
+			.text {
+				h4 {
+					color: #ece7e2;
+					font-weight: 400;
+				}
+				p {
+					font-weight: 400;
+					color: #ece7e2;
+				}
+				animation: texture 1s;
+			}
+		}
+		.brand_story2 {
+			background-color: #ece7e2;
+			.text {
+				transform: translateY(0px);
+				opacity: 0;
+				h4 {
+					color: #2a3923;
+					font-weight: 500;
+				}
+				p {
+					color: #2a3923;
+					font-weight: 500;
+				}
+			}
+			img {
+				opacity: 0.8;
+				transition: 0.5s;
+			}
+			&.on {
+				.text {
+					animation: texture 0.7s;
+					opacity: 1;
+				}
+				img {
+					opacity: 1;
+				}
+			}
+		}
+		.brand_feature {
+			width: 100%;
+			height: 100%;
+			background-color: #ece7e2;
+			h4 {
+				opacity: 0;
+				padding-top: 100px;
+				padding-bottom: 50px;
+				font: 500 37px/1 'Lora';
+				text-align: center;
+				color: #2a3923;
+				transition: all 0.5s;
+			}
+			ul {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0px 50px;
+				li {
+					width: calc(100% / 3);
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 30px;
+					transform: translateY(200px);
+					opacity: 0;
+					transition-duration: 0.7s;
+					img {
+						width: 200px;
+						height: 100%;
+					}
+					h5 {
+						font: 700 23px/1 'Pretendard';
+						color: #2a3923;
+					}
+					p {
+						width: 63%;
+						font: 500 16px/1.7 'Pretendard';
+						color: #2a3923;
+						padding-bottom: 100px;
+					}
+					@for $i from 0 through 2 {
+						&:nth-of-type(#{$i + 1}) {
+							transition-delay: 0.2s * $i;
+						}
+					}
+				}
+				:nth-of-type(3) {
+					img {
+						width: 200px;
+						height: 220px;
+					}
+				}
+			}
+			&.on {
+				h4 {
+					opacity: 1;
+				}
+				ul {
+					li {
+						transform: translateY(0px);
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.brand_nature {
+			width: 100%;
+			height: 75vh;
+			background-color: #ece7e2;
+			overflow: hidden;
+			transition: background-color 1s;
+			h4 {
+				padding-top: 100px;
+				padding-bottom: 30px;
+				font: 400 37px/1 'Lora';
+				text-align: center;
+				color: #ece7e2;
+			}
+			.swiper {
+				width: 100%;
+				height: calc(100% - 190px);
+				.swiper-wrapper {
+					.swiper-slide {
+						width: 100%;
+						height: 100%;
+						display: flex;
+						.left_text {
+							width: 33%;
+							height: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							padding-left: 300px;
+							text-align: center;
+							h5 {
+								font: 400 23px/1 'Lora';
+								color: #ece7e2;
+								padding-bottom: 45px;
+							}
+							.left {
+								font: normal 16px/1.5 'Pretendard';
+								color: #ece7e2;
+
+								.large {
+									font: normal 17px/1 'Lato';
+								}
+							}
+						}
+						.center {
+							width: 33%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							img {
+								width: 400px;
+							}
+						}
+						.right_text {
+							width: 33%;
+							height: 100%;
+							padding-left: 30px;
+							padding-right: 150px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							.right {
+								font: normal 16px/1.8 'Pretendard';
+								color: #ece7e2;
+							}
+						}
+					}
+				}
+			}
+			&.on {
+				background-color: #2a3923;
+				.swiper {
+					.swiper-wrapper {
+						.swiper-slide {
+							.center {
+								img {
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.brand_join {
+			width: 100%;
+			height: 80vh;
+			background-color: #ece7e2;
+			ul {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				li {
+					width: calc(100% / 3);
+					height: 100%;
+					opacity: 0;
+					transform: translateY(200px);
+					transition-duration: 0.7s;
+					.join_left,
+					.join_right {
+						overflow: hidden;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							transform: scale(1);
+							transition: all 0.2s;
+						}
+					}
+					.join_center {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						h4 {
+							padding-top: 100px;
+							padding-bottom: 30px;
+							font: 600 30px/1 'Lora';
+							color: #2a3923;
+						}
+						p {
+							padding-bottom: 140px;
+							font: 500 16px/1 'Pretendard';
+							color: #2a3923;
+						}
+						img {
+							width: 400px;
+							height: 285px;
+							transition: all 0.2s;
+						}
+					}
+					@for $i from 0 through 2 {
+						&:nth-of-type(#{$i + 1}) {
+							transition-delay: 0.2s * $i;
+						}
+					}
+					div[class*='join'] {
+						img {
+							&:hover {
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+			}
+			&.on {
+				ul {
+					li {
+						transform: translateY(0px);
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	#brand {
+		.inner {
+			div[class*='story'] {
+				img {
+					width: 100%;
+					height: 35vh;
+					object-fit: cover;
+				}
+				.text {
+					width: 100%;
+					h4 {
+						padding-top: 50px;
+						padding-bottom: 15px;
+						font-size: 30px;
+					}
+					p {
+						width: 70%;
+						font-size: 14px;
+						padding-bottom: 20px;
+					}
+					p.eng {
+						font-size: 15px;
+						padding-bottom: 50px;
+					}
+				}
+			}
+			.brand_story1 {
+				flex-direction: column;
+			}
+			.brand_story2 {
+				flex-wrap: wrap-reverse;
+				.text {
+					opacity: 1;
+				}
+				img {
+					opacity: 1;
+				}
+				&.on {
+					.text {
+						animation: none;
+					}
+				}
+			}
+			.brand_feature {
+				h4 {
+					opacity: 1;
+					padding-top: 50px;
+					font-size: 30px;
+				}
+				ul {
+					flex-direction: column;
+					li {
+						width: 90%;
+						opacity: 1;
+						transform: translateY(0px);
+						gap: 0px;
+						img {
+							width: 50%;
+							height: 50%;
+							padding-bottom: 30px;
+						}
+						h5 {
+							font-size: 22px;
+							padding-bottom: 15px;
+						}
+						p {
+							width: 100%;
+							font-size: 14px;
+							padding-bottom: 50px;
+						}
+					}
+				}
+			}
+			.brand_nature {
+				height: 75vh;
+				h4 {
+					padding-top: 50px;
+					padding-bottom: 40px;
+					font-size: 23px;
+				}
+				.swiper {
+					height: 100%;
+					.swiper-wrapper {
+						.swiper-slide {
+							flex-direction: column;
+							.left_text {
+								width: 100%;
+								height: 40%;
+								padding-left: 0px;
+								h5 {
+									padding-bottom: 30px;
+									font-size: 19px;
+								}
+								.left {
+									font-size: 14px;
+									.large {
+										font-size: 15px;
+									}
+								}
+							}
+							.center {
+								width: 100%;
+								img {
+									width: 50%;
+								}
+							}
+							.right_text {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			.brand_join {
+				height: 65vh;
+				ul {
+					li {
+						display: none;
+					}
+					.join_mo {
+						display: block;
+						width: 90%;
+						margin: 0 auto;
+						.join_center {
+							width: 100%;
+							h4 {
+								padding-top: 50px;
+								padding-bottom: 20px;
+								font-size: 25px;
+							}
+							p {
+								padding-bottom: 70px;
+								font: bold 12px/1.7 'Pretendard';
+								text-align: center;
+							}
+							img {
+								width: 80%;
+								height: 80%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

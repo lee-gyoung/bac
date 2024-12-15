@@ -1,0 +1,194 @@
+#shop {
+	width: 100%;
+	height: 100%;
+	.inner {
+		width: 100%;
+		height: 100%;
+		padding-top: 150px;
+		#shop_tag {
+			padding-bottom: 60px;
+			font: 500 37px/1 'Lora';
+			text-align: center;
+			color: #2a3923;
+		}
+		#shop_title {
+			width: 100%;
+			padding-bottom: 170px;
+			display: flex;
+			justify-content: center;
+			ul {
+				display: flex;
+				gap: 10px;
+				li {
+					width: 120px;
+					height: 50px;
+					border: 1px solid #ddd;
+					div {
+						width: 100%;
+						height: 100%;
+						text-align: center;
+						font: 500 16px/50px 'Lato';
+						color: #000;
+						cursor: pointer;
+					}
+					&.on {
+						border: 1px solid #aaa;
+					}
+				}
+			}
+		}
+		.shop_product {
+			width: 100%;
+			height: 110vh;
+			.shop_product_wrap {
+				position: relative;
+				width: 1460px;
+				height: 100%;
+				margin: 0 auto;
+				ul {
+					position: absolute;
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					gap: 20px;
+					opacity: 0;
+					z-index: 1;
+					li {
+						width: 350px;
+						height: 420px;
+						margin-bottom: 30px;
+						a {
+							display: block;
+							width: 100%;
+							height: 100%;
+							pointer-events: none;
+							.img_wrap {
+								width: 100%;
+								height: 350px;
+								position: relative;
+								margin-bottom: 20px;
+								pointer-events: auto;
+								img {
+									position: absolute;
+									width: 100%;
+									height: 100%;
+									border: 1px solid #ddd;
+								}
+								.products {
+									transition: all 0.2s;
+								}
+								.colors {
+									opacity: 0;
+
+									transition: all 0.2s;
+								}
+								&:hover {
+									.colors {
+										opacity: 1;
+									}
+									.products {
+										opacity: 0;
+									}
+								}
+							}
+							.info {
+								width: 100%;
+								height: 50px;
+								text-align: center;
+								p {
+									pointer-events: auto;
+									font: normal 16px/1 'Pretendard';
+									color: #000;
+								}
+								span {
+									pointer-events: auto;
+									font: normal 14px/35px 'Pretendard';
+									color: #333;
+								}
+							}
+						}
+					}
+					&.on {
+						opacity: 1;
+						z-index: 3;
+					}
+				}
+				#fragrance {
+					li {
+						a {
+							.img_wrap {
+								.products {
+									z-index: 2;
+								}
+								.colors {
+									opacity: 0.5;
+								}
+								&:hover {
+									.colors {
+										opacity: 1;
+										z-index: 2;
+									}
+									.products {
+										opacity: 0.5;
+										z-index: 1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	#shop {
+		.inner {
+			#shop_tag {
+				padding-bottom: 50px;
+				font-size: 30px;
+			}
+			#shop_title {
+				padding-bottom: 100px;
+				ul {
+					li {
+						width: 90px;
+						height: 45px;
+						div {
+							font-size: 13px;
+							line-height: 45px;
+						}
+					}
+				}
+			}
+			.shop_product {
+				height: 160vh;
+				.shop_product_wrap {
+					width: 100%;
+					ul {
+						justify-content: center;
+						li {
+							width: 40%;
+							height: 100%;
+							margin-bottom: 10px;
+							a {
+								.img_wrap {
+									height: 165px;
+								}
+								.info {
+									p {
+										font-size: 13px;
+									}
+									span {
+										font-size: 11px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

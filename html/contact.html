@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/>
+		<title>Contact</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link
+			rel="shortcut icon"
+			href="../img/logo/favicon.png"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script
+			src="https://kit.fontawesome.com/c12878d3ba.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="../script/jquery-3.6.4.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script
+			type="text/javascript"
+			src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=3fb677db211075e44976a3ab3ae0cefd"
+		></script>
+
+		<script defer src="../script/contact.js"></script>
+		<script defer src="../script/main.js"></script>
+		<script defer src="../script/main_jqurey_function.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="inner">
+				<nav class="header_menu">
+					<ul>
+						<li><a href="./brand.html">Brand</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+						<li class="header_slide">
+							<a href="./shop.html">Shop</a>
+							<ul class="sub_menu">
+								<li><a href="./shop.html?to=Nail">Nail</a></li>
+								<li><a href="./shop.html?to=Lip">Lip</a></li>
+								<li><a href="./shop.html?to=Fragrance">Fragrance</a></li>
+							</ul>
+						</li>
+						<li class="header_slide">
+							<a href="./notice.html">Community</a>
+							<ul class="sub_menu">
+								<li><a href="./notice.html">Notice</a></li>
+								<li><a href="./review.html">Review</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<h1 class="logo">
+					<a href="../index.html">
+						<img src="../img/logo/header_logo.png" alt="portre 로고"
+					/></a>
+				</h1>
+				<ul class="header_sns">
+					<li>
+						<a target="_blank" href="https://www.instagram.com/portrekr/">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://pf.kakao.com/_mFhBG">
+							<i class="fa-solid fa-comment"></i>
+						</a>
+					</li>
+				</ul>
+				<a href="#" id="header_left_btn">
+					<span>menu</span>
+				</a>
+				<nav id="left_btn_menu">
+					<ul>
+						<li><a href="./brand.html">Brand</a></li>
+						<li><a href="./contact.html">Contact</a></li>
+						<li class="btn_fold">
+							<a href="#">Shop</a>
+							<div class="chevron_btn"></div>
+							<ul class="btn_sub_menu">
+								<li><a href="./shop.html?to=Nail">Nail</a></li>
+								<li><a href="./shop.html?to=Lip">Lip</a></li>
+								<li><a href="./shop.html?to=Fragrance">Fragrance</a></li>
+							</ul>
+						</li>
+						<li class="btn_fold">
+							<a href="#">Community</a>
+							<div class="chevron_btn"></div>
+							<ul class="btn_sub_menu">
+								<li><a href="./notice.html">Notice</a></li>
+								<li><a href="./review.html">Review</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<section class="content" id="contact">
+			<div class="inner">
+				<h3>Contact Us</h3>
+				<div class="contact_pics">
+					<img
+						class="sub_contact_left"
+						src="../img/sub_contact/contact1-1.jpg"
+						alt=""
+					/>
+					<img
+						class="sub_contact_right"
+						src="../img/sub_contact/contact1-2.jpg"
+						alt=""
+					/>
+				</div>
+				<div class="contact_txt">
+					<h5>서울시 마포구 양화로 6길 88 5층</h5>
+					<p class="normal">
+						5F 88, Yanghwa-ro 6-gil, Mapo-gu, Seoul, Republic of Korea
+					</p>
+					<p class="light">
+						(운영시간 11:00 - 19:00 / 연중무휴, 명절 당일 휴무)
+					</p>
+				</div>
+				<div class="contact_map">
+					<div id="map"></div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="inner">
+				<section class="footer_info">
+					<h2 class="footer_info_logo">
+						<a href="../index.html">
+							<img src="../img/logo/header_logo_w.png" alt="portre 로고"
+						/></a>
+					</h2>
+					<div class="footer_info_terms">
+						<p>
+							Copyright &copy; 주식회사 포트레 all rights reserved. CEO. Kang
+							Inhee
+						</p>
+						<p>
+							(Hapjeong-dong 410-4) 5F, 88, Yanghwa-ro 6-gil, Mapo-gu, Seoul,
+							Republic of Korea
+						</p>
+						<p>Business License. 404-87-02841</p>
+						<p>Mail Order License. 2024-SeoulMapo-0173</p>
+						<p>Email. shop@portrekr.com</p>
+					</div>
+				</section>
+				<section class="footer_sns">
+					<h3 class="hidden">brand sns</h3>
+					<ul>
+						<li>SNS</li>
+						<li>
+							<a target="_blank" href="https://www.instagram.com/portrekr/"
+								>Instagram</a
+							>
+						</li>
+						<li>
+							<a target="_blank" href="https://pf.kakao.com/_mFhBG"
+								>Kakaotalk</a
+							>
+						</li>
+					</ul>
+				</section>
+				<section class="footer_text">
+					<h3 class="hidden">company information</h3>
+					<ul>
+						<li class="name">Customer Center</li>
+						<li>1577-7905</li>
+						<li></li>
+						<li>10:00-17:00</li>
+						<li>주말 및 공휴일 제외</li>
+					</ul>
+				</section>
+			</div>
+		</footer>
+	</body>
+</html>

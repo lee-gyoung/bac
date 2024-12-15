@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portré</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link
+			rel="shortcut icon"
+			href="./img/logo/favicon.png"
+			type="image/x-icon"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/c12878d3ba.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./script/jquery-3.6.4.js"></script>
+		<script defer src="./script/main.js"></script>
+		<script defer src="./script/main_jqurey_function.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="inner">
+				<nav class="header_menu">
+					<ul>
+						<li><a href="./html/brand.html">Brand</a></li>
+						<li><a href="./html/contact.html">Contact</a></li>
+						<li class="header_slide">
+							<a href="./html/shop.html">Shop</a>
+							<ul class="sub_menu">
+								<li><a href="./html/shop.html?to=Nail">Nail</a></li>
+								<li><a href="./html/shop.html?to=Lip">Lip</a></li>
+								<li><a href="./html/shop.html?to=Fragrance">Fragrance</a></li>
+							</ul>
+						</li>
+						<li class="header_slide">
+							<a href="./html/notice.html">Community</a>
+							<ul class="sub_menu">
+								<li><a href="./html/notice.html">Notice</a></li>
+								<li><a href="./html/review.html">Review</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<h1 class="logo">
+					<a href="./index.html">
+						<img src="./img/logo/header_logo.png" alt="portre 로고"
+					/></a>
+				</h1>
+				<ul class="header_sns">
+					<li>
+						<a target="_blank" href="https://www.instagram.com/portrekr/">
+							<i class="fa-brands fa-instagram"></i>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://pf.kakao.com/_mFhBG">
+							<i class="fa-solid fa-comment"></i>
+						</a>
+					</li>
+				</ul>
+				<a href="#" id="header_left_btn">
+					<span>menu</span>
+				</a>
+				<nav id="left_btn_menu">
+					<ul>
+						<li><a href="./html/brand.html">Brand</a></li>
+						<li><a href="./html/contact.html">Contact</a></li>
+						<li class="btn_fold">
+							<a href="#">Shop</a>
+							<div class="chevron_btn"></div>
+							<ul class="btn_sub_menu">
+								<li><a href="./html/shop.html?to=Nail">Nail</a></li>
+								<li><a href="./html/shop.html?to=Lip">Lip</a></li>
+								<li><a href="./html/shop.html?to=Fragrance">Fragrance</a></li>
+							</ul>
+						</li>
+						<li class="btn_fold">
+							<a href="#">Community</a>
+							<div class="chevron_btn"></div>
+							<ul class="btn_sub_menu">
+								<li><a href="./html/notice.html">Notice</a></li>
+								<li><a href="./html/review.html">Review</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="main_page scroll_event">
+				<section id="main_page_scroll">
+					<h3 class="hidden">main page</h3>
+					<div class="scroll_btn">
+						<a href="#main_slide">
+							<img
+								id="scrBtn"
+								src="./img/main_page/scroll_btn_w.png"
+								alt="메인 페이지 스크롤 버튼"
+							/>
+						</a>
+					</div>
+				</section>
+			</div>
+			<div class="main_slide scroll_event">
+				<section id="main_slide_left">
+					<h3 class="hidden">main slide content</h3>
+					<div class="main_slide_pics swiper-wrapper">
+						<div class="swiper-slide">
+							<img
+								src="./img/main_slide/mainslide1.jpg"
+								alt="포트레의 예술성을 돋보이는 제품 사진"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="./img/main_slide/mainslide2.jpg"
+								alt="포트레 제품을 여러 개 진열한 사진"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="./img/main_slide/mainslide3.jpg"
+								alt="포트레의 향수와 무화과가 놓인 사진"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="./img/main_slide/mainslide4.jpg"
+								alt="포트레의 향수와 라임이 놓인 사진"
+							/>
+						</div>
+						<div class="swiper-slide">
+							<img
+								src="./img/main_slide/mainslide5.jpg"
+								alt="포트레의 향수와 장식물이 놓인 사진"
+							/>
+						</div>
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</section>
+				<section id="main_slide_right">
+					<h3 class="hidden">main slide content</h3>
+					<div id="right_slide_wrapper">
+						<ul class="right_slide_pics">
+							<li>
+								<img
+									src="./img/main_slide/mainfade1.png"
+									alt="모델의 포트레 제품 사용 사진"
+								/>
+							</li>
+							<li>
+								<img
+									src="./img/main_slide/mainfade2.png"
+									alt="포트레 향수 화보 모델 사진"
+								/>
+							</li>
+							<li>
+								<img
+									src="./img/main_slide/mainfade3.jpg"
+									alt="포트레 향수 제품 사진"
+								/>
+							</li>
+							<li>
+								<img
+									src="./img/main_slide/mainfade4.png"
+									alt="포트레 제품과 어울리는 과일 사진"
+								/>
+							</li>
+							<li>
+								<img
+									src="./img/main_slide/mainfade5.png"
+									alt="포트레 브랜드 컨셉 사진"
+								/>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+			<div class="main_product scroll_event">
+				<section id="main_product_best">
+					<h3>BEST ITEM</h3>
+					<ul>
+						<li>
+							<a href="./html/shop.html">
+								<div class="img_wrap">
+									<img
+										class="products"
+										src="./img/best_product/best1.png"
+										alt="네일 누보 주스 라 뽐므"
+									/><img
+										class="colors"
+										src="./img/best_product/best1-1.png"
+										alt="네일 누보 주스 라 뽐므의 발색"
+									/>
+								</div>
+								<div class="info">
+									<p>네일 누보 주스</p>
+									<span>라 뽐므</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html">
+								<div class="img_wrap">
+									<img
+										class="products"
+										src="./img/best_product/best2.png"
+										alt="네일 누보 주스 올리비에"
+									/><img
+										class="colors"
+										src="./img/best_product/best2-1.png"
+										alt="네일 누보 주스 올리비에의 발색"
+									/>
+								</div>
+								<div class="info">
+									<p>네일 누보 주스</p>
+									<span>올리비에</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html">
+								<div class="img_wrap">
+									<img
+										class="products"
+										src="./img/best_product/best3.png"
+										alt="네일 누보 주스 코랄리나"
+									/><img
+										class="colors"
+										src="./img/best_product/best3-1.png"
+										alt="네일 누보 주스 코랄리나의 발색"
+									/>
+								</div>
+								<div class="info">
+									<p>네일 누보 주스</p>
+									<span>코랄리나</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html">
+								<div class="img_wrap">
+									<img
+										class="products"
+										src="./img/best_product/best4.png"
+										alt="네일 누보 주스 마지끄"
+									/><img
+										class="colors"
+										src="./img/best_product/best4-1.png"
+										alt="네일 누보 주스 마지끄의 발색"
+									/>
+								</div>
+								<div class="info">
+									<p>네일 누보 주스</p>
+									<span>마지끄</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="main_tabmenu scroll_event">
+				<section id="main_tab_new">
+					<div id="tab_title">
+						<h3>NEW PRODUCT</h3>
+						<ul>
+							<li class="active">
+								<div data-tab="#tab_fragrance">Fragrance</div>
+							</li>
+							<li>
+								<div data-tab="#tab_nail">Nail</div>
+							</li>
+							<li>
+								<div data-tab="#tab_lip">Lip</div>
+							</li>
+						</ul>
+					</div>
+					<ul id="tab_fragrance" class="active">
+						<li>
+							<a href="./html/shop.html?to=Fragrance">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/fragrance/tab1.jpg"
+										alt="롱테이크 바질 앤 베티버"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/fragrance/tab1-1.jpg"
+										alt="롱테이크 바질 앤 베티버 제품 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>롱 테이크</p>
+									<span>바질 앤 베티버</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Fragrance">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/fragrance/tab2.jpg"
+										alt="롱테이크 블랙티 앤 피그"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/fragrance/tab2-1.jpg"
+										alt="롱테이크 블랙티 앤 피그 제품 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>롱 테이크</p>
+									<span>블랙티 앤 피그</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Fragrance">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/fragrance/tab3.jpg"
+										alt="애프터 블로우 오 드 퍼퓸 자스민 머스크"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/fragrance/tab3-1.png"
+										alt="애프터 블로우 오 드 퍼퓸 자스민 머스크 제품 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>애프터 블로우 오 드 퍼퓸</p>
+									<span>자스민 머스크</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Fragrance">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/fragrance/tab4.jpg"
+										alt="애프터 블로우 오 드 퍼퓸 텐더 우드"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/fragrance/tab4-1.png"
+										alt="애프터 블로우 오 드 퍼퓸 텐더 우드 제품 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>애프터 블로우 오 드 퍼퓸</p>
+									<span>텐더 우드</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul id="tab_nail">
+						<li>
+							<a href="./html/shop.html?to=Nail">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/nail/tab1.png"
+										alt="네일 누보 주스 넥타린"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/nail/tab1-1.png"
+										alt="네일 누보 주스 넥타린의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>넥타린</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Nail">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/nail/tab2.png"
+										alt="네일 누보 주스 에뚜알"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/nail/tab2-1.png"
+										alt="네일 누보 주스 에뚜알의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>에뚜알</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Nail">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/nail/tab3.png"
+										alt="네일 누보 주스 르 씨엘"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/nail/tab3-1.png"
+										alt="네일 누보 주스 르 씨엘의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>르 씨엘</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Nail">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/nail/tab4.png"
+										alt="네일 누보 주스 스너그"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/nail/tab4-1.png"
+										alt="네일 누보 주스 스너그의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>네일 누보 주스</p>
+									<span>스너그</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul id="tab_lip">
+						<li>
+							<a href="./html/shop.html?to=Lip">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/lip/모어로즈.png"
+										alt="베어 컬러 밤 모어 로즈"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/lip/모어로즈1-1.png"
+										alt="베어 컬러 밤 모어 로즈의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>베어 컬러 밤</p>
+									<span>모어 로즈</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Lip">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/lip/모어베리.png"
+										alt="베어 컬러 밤 모어 베리"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/lip/모어베리1-1.png"
+										alt="베어 컬러 밤 모어 베리의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>베어 컬러 밤</p>
+									<span>모어 베리</span>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="./html/shop.html?to=Lip">
+								<div class="tab_img">
+									<img
+										class="products"
+										src="./img/main_tab/lip/모어코랄.png"
+										alt="베어 컬러 밤 모어 코랄"
+									/>
+									<img
+										class="colors"
+										src="./img/main_tab/lip/모어코랄1-1.png"
+										alt="베어 컬러 밤 모어 코랄의 발색 사진"
+									/>
+								</div>
+								<div class="tab_text">
+									<p>베어 컬러 밤</p>
+									<span>모어 코랄</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="main_contact scroll_event">
+				<h3>CONTACT</h3>
+				<div class="main_contact_wrap">
+					<section id="contact_left">
+						<h4 class="hidden">contact content</h4>
+						<div class="contact_left_img">
+							<img
+								src="./img/contact_part/contact_left.jpeg"
+								alt="포트레 쇼룸의 내부 사진"
+							/>
+						</div>
+					</section>
+					<dl class="contact_left_text">
+						<dt class="on"><a href="#">1</a></dt>
+						<dd class="on">
+							포트레는 시대가 정의하는 아름다움에서 벗어나, <br />
+							당신의 자연스럽고 고유한 순간을 그려냅니다. <br />
+							포트레가 그날의 다양한 분위기, 표정, 감정을 <br />
+							오롯이 담아내는 자화상이 될 수 있기를.
+						</dd>
+						<dt><a href="#">2</a></dt>
+						<dd>
+							비건 뷰티 브랜드 Portré의 첫 번째 쇼룸 합정에서는
+							<br />
+							포트레만의 고유한 메시지를 전달하고자 <br />
+							초록빛으로 가득한 합정의 감성 가득한 공간에서 <br />
+							포트레의 제품을 만나볼 수 있는 큐레이션 존을 선보입니다
+						</dd>
+						<dt><a href="#">3</a></dt>
+						<dd>
+							서울특별시 마포구 양화로 6길 88 <br />
+							매일 11:00 - 19:00 <br /><br />
+							<a href="./html/contact.html">카카오 맵으로 확인하기</a>
+						</dd>
+					</dl>
+					<section id="contact_right">
+						<h4 class="hidden">contact content</h4>
+						<div class="contact_right_img">
+							<img
+								class="on"
+								src="./img/contact_part/contact_right.png"
+								alt="포트레 쇼룸의 내부 디스플레이 사진"
+							/>
+							<video
+								src="./img/contact_part/contact_right_vid.mp4"
+								muted
+								autoplay
+								loop
+								poster="./img/contact_part/contact_right.png"
+							></video>
+							<video
+								src="./img/contact_part/contact_right_vid2.mp4"
+								muted
+								autoplay
+								loop
+								poster="./img/contact_part/contact_right.png"
+							></video>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="inner">
+				<section class="footer_info">
+					<h2 class="footer_info_logo">
+						<a href="./index.html">
+							<img src="./img/logo/header_logo_w.png" alt="portre 로고"
+						/></a>
+					</h2>
+					<div class="footer_info_terms">
+						<p>
+							Copyright &copy; 주식회사 포트레 all rights reserved. CEO. Kang
+							Inhee
+						</p>
+						<p>
+							(Hapjeong-dong 410-4) 5F, 88, Yanghwa-ro 6-gil, Mapo-gu, Seoul,
+							Republic of Korea
+						</p>
+						<p>Business License. 404-87-02841</p>
+						<p>Mail Order License. 2024-SeoulMapo-0173</p>
+						<p>Email. shop@portrekr.com</p>
+					</div>
+				</section>
+				<section class="footer_sns">
+					<h3 class="hidden">brand sns</h3>
+					<ul>
+						<li>SNS</li>
+						<li>
+							<a target="_blank" href="https://www.instagram.com/portrekr/"
+								>Instagram</a
+							>
+						</li>
+						<li>
+							<a target="_blank" href="https://pf.kakao.com/_mFhBG"
+								>Kakaotalk</a
+							>
+						</li>
+					</ul>
+				</section>
+				<section class="footer_text">
+					<h3 class="hidden">company information</h3>
+					<ul>
+						<li class="name">Customer Center</li>
+						<li>1577-7905</li>
+						<li></li>
+						<li>10:00-17:00</li>
+						<li>주말 및 공휴일 제외</li>
+					</ul>
+				</section>
+			</div>
+		</footer>
+	</body>
+</html>

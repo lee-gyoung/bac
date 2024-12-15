@@ -1,0 +1,15 @@
+***push***
+
+git add .
+git commit -m " "
+git push origin master
+
+
+
+***pull***
+
+git init
+git remote add origin https://github.com/lee-gyoung/project.git
+git config --global user.name lee-gyoung
+git config --global user.email rock2me123@gmail.com
+git pull origin master

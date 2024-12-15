@@ -1,0 +1,16 @@
+{
+	"workbench.colorTheme": "Monokai",
+	"editor.fontSize": 40,
+	"workbench.iconTheme": "vscode-icons",
+	"liveServer.settings.CustomBrowser": "chrome",
+	"fontAwesomeAutocomplete.triggerWord": "fa-",
+	"prettier.tabWidth": 2,
+	"prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"prettier.quoteProps": "consistent",
+	"prettier.proseWrap": "always"
+}

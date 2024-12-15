@@ -1,0 +1,6 @@
+sass
+
+sass --watch style.scss:style.css
+
+
+sass --watch scss:css
